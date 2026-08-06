@@ -57,7 +57,7 @@ const Navbar = () => {
             "
           />
         </Link>
-        <div className="ml-2 mr-5 hidden min-h-[2em] w-[0.1rem] bg-gray-200 md: inline-block">
+        <div className="ml-2 mr-5 hidden min-h-[2em] w-[0.1rem] bg-gray-200 md:inline-block">
 
         </div>
       </div>
