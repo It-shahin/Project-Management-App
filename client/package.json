@@ -1,0 +1,44 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^9.3.0",
+    "@mui/x-data-grid": "^9.10.1",
+    "axios": "^1.19.0",
+    "date-fns": "^4.4.0",
+    "gantt-task-react": "^0.3.9",
+    "lucide-react": "^1.28.0",
+    "motion": "^13.0.0",
+    "next": "16.3.0",
+    "numeral": "^2.0.6",
+    "react": "19.2.8",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "19.2.8",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/numeral": "^2.0.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/uuid": "^10.0.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
