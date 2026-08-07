@@ -12,7 +12,6 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "@prisma/client": "^7.9.1",
     "@types/node": "^26.1.2",
     "ts-node": "^10.9.2",
     "tsx": "^4.23.11",
@@ -20,6 +19,7 @@
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.9.1",
+    "@prisma/client": "^7.9.1",
     "pg": "^8.22.0",
     "prisma": "^7.9.1"
   }
