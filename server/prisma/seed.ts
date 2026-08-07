@@ -102,10 +102,10 @@ async function deleteAllData(modelNames: SeedModelName[]) {
   }
 }
 
-async function resetIdentitySequences() {
+async function syncIdentitySequences() {
   for (const { tableName, columnName } of identityColumns) {
     await prisma.$executeRawUnsafe(
-      `SELECT setval(pg_get_serial_sequence('"${tableName}"', '${columnName}'), 1, false);`,
+      `SELECT setval(pg_get_serial_sequence('"${tableName}"', '${columnName}'), COALESCE((SELECT MAX("${columnName}") FROM "${tableName}"), 0) + 1, false);`,
     );
   }
 }
@@ -136,7 +136,6 @@ async function main() {
   ];
 
   await deleteAllData(deleteOrder);
-  await resetIdentitySequences();
 
   for (const modelName of seedOrder) {
     const fileName = `${modelName}.json`;
@@ -152,6 +151,8 @@ async function main() {
       console.error(`Error seeding data for ${modelName}:`, error);
     }
   }
+
+  await syncIdentitySequences();
 }
 
 main()
