@@ -25,7 +25,7 @@ app.use("/projects", projectRoutes);
 app.use("/tasks", taskRoutes)
 
 // server
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || process.env.port || 3000;
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
 });

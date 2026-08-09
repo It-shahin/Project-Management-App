@@ -87,7 +87,7 @@ export const api = createApi({
 
         createTask: build.mutation<Task, Partial<Task>>({
             query: (task) => ({
-            url: "Tasks",
+            url: "tasks",
             method: "POST",
             body: task
             }),
@@ -110,4 +110,4 @@ export const api = createApi({
     }),
 });
 
-export const { useGetProjectQuery, useCreateProjectsMutation, useGetTasksQuery, useCreateTaskMutation } = api;
+export const { useGetProjectQuery, useCreateProjectsMutation, useGetTasksQuery, useCreateTaskMutation, useUpdateTaskStatusMutation } = api;
