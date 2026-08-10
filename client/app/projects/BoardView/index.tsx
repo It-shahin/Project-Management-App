@@ -141,6 +141,8 @@ const Task = ({ task}: TaskProps) => {
     
     const numberOfComments = (task.comments && task.comments.length) || 0;
 
+    const attachment = Array.isArray(task.attachments) ? task.attachments[0] : task.attachments;
+
     const PriorityTag = ({ priority} : { priority: TaskType["priority"]}) => (
         <div className={`rounded-full px-2 py-1 text-xs font-semibold ${
             priority === "Urgent" ? "bg-red-200 text-red-700"
@@ -163,10 +165,10 @@ const Task = ({ task}: TaskProps) => {
             }`}
         >
             
-            {task.attachments && task.attachments.length > 0 && (
+            {attachment && (
                 <Image
-                    src={`/${task.attachments[0].fileURL}`}
-                    alt={task.attachments[0].fileName}
+                    src={`/${attachment.fileURL}`}
+                    alt={attachment.fileName}
                     width={400}
                     height={200}
                     className="h-auto w-full rounded-t-md"
