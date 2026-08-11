@@ -8,7 +8,7 @@ type Props = {
 
 const Header = ({name, buttonComponent, isSmallTaxt = false}: Props) => {
   return (
-    <div className='mb-5 flex w-full items-center justify-center'>
+    <div className='mb-5 flex w-full items-center justify-between'>
         <h1 className={`${isSmallTaxt ? "text-lg" : "text-2xl"} font-semibold dark:text-white`}>
             {name}
         </h1>

@@ -89,7 +89,7 @@ const TableView = ({ id, setIsModalNewTaskOpen }: Props) => {
               Add Task
             </button>
           }
-          isSmallText
+          isSmallTaxt
         />
       </div>
       <DataGrid
