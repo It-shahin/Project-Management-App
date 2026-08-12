@@ -7,7 +7,9 @@ import morgan from "morgan";
 // Route imports
 import projectRoutes from "./routes/projectRoutes";
 import taskRoutes from "./routes/taskRoutes";
-import searchRoutes from "./routes/searchRoutes"
+import searchRoutes from "./routes/searchRoutes";
+import userRoutes from "./routes/userRoutes";
+import teamRoutes from "./routes/teamRoutes";
 
 // configurations
 const app = express();
@@ -23,8 +25,10 @@ app.get('/', (req, res) => {
     res.send("This is home route");
 });
 app.use("/projects", projectRoutes);
-app.use("/tasks", taskRoutes)
-app.use("/search", searchRoutes)
+app.use("/tasks", taskRoutes);
+app.use("/search", searchRoutes);
+app.use("/users", userRoutes);
+app.use("/teams", teamRoutes)
 
 // server
 const port = process.env.PORT || process.env.port || 3000;
