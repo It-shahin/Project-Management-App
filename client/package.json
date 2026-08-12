@@ -18,6 +18,7 @@
     "date-fns": "^4.4.0",
     "dotenv": "^17.4.2",
     "gantt-task-react": "^0.3.9",
+    "lodash": "^4.18.1",
     "lucide-react": "^1.28.0",
     "motion": "^13.0.0",
     "next": "16.3.0",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/lodash": "^4.17.25",
     "@types/node": "^20",
     "@types/numeral": "^2.0.5",
     "@types/react": "^19",
